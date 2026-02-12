@@ -1,5 +1,5 @@
 class Nodo:
-    def __init__(self, documento, nombre):#supongamos que son pacientes de un hospital
+    def __init__(self, documento, nombre): #supongamos que son pacientes de un hospital
         self.documento = documento
         self.nombre = nombre
         self.siguiente = None
@@ -27,7 +27,8 @@ class Lista:
             actual = actual.siguiente
             print(actual.nombre, actual.documento)
             
-
+    def MetodoX(self):
+        print("xd")
         
 
 
