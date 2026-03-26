@@ -1,0 +1,122 @@
+
+
+Expresiones regulares REGEX
+
+clase anterior: palabras simples
+
+patrones: una palabra por ejmplo "hola"
+
+metacaracteres: coincidir con muchas cosas, buscar numeros, 
+caracteres especiales, validar si es un correo valido etc
+
+metacaracter mas sencillo el punto "." cualquier caracter
+
+para usarlo en python:
+
+el regex se puede usar en muchos ambitos, hasta vs code tiene un buscador 
+
+
+----------------------------------------------------------------------------
+
+
+REGEX: g.to //busca cualquier palabra que comience en g + caracter + to
+
+gato, gato, gito, goto, guto, g4to, g-to
+--------------------------------------------------------------
+
+REGEX ^ que al principio del texto tenga lo que se requiera
+
+REGEX $ que al final del texto tenga lo que se requiera
+
+REGEX ? el simbolo anterior esta 0 o 1 vez
+
+si estan asi solito solo toma el anterior
+
+REGEX * el simbolo anterior esta 0 o n vez
+
+REGEX + el simbolo anterior esta 1 o n vez
+
+REGEX {n} el simbolo anterior esta n veces
+
+REGEX {n,m} el simbolo anterior esta entre n y m veces
+
+REGEX [ab]{n,m} el los caracteres en el corchete esta entre n y m veces
+
+REGEX [a-z]{n,m} los caracteres entre los ascci a z estan n o m veces
+
+REGEX \d los caracteres del 0 al 9 
+
+
+
+REGEX [A-Z]{3}\s?[0-9]{3} ejemplo de placas de carro 
+recomendacion : usar al principio ^ y al final $ para validar que lo ingresado solo sea eso
+
+njk 456
+njk456
+
+
+REGEX \s espacio
+
+REGEX \. para porder detectar los puntos
+
+REGEX \(.+\) scrapea los () es decir cosas que esten dentro de ()
+
+reto: validar numeros de telefono
+REGEX: ^(\+?57[\s-]?)?(3\d{2}[\s-]?\d{3}[\s-]?\d{4}|60\d[\s-]?\d{3}[\s-]?\d{4})$
+
+reto: validar si lo ingresado es un correo
+REGEX: [A-Za-z0-9_-\.]+@[A-Za-z]+\.[A-Za-z]+(\.[A-Za-z]+)?
+
+REGEX \w todas las letras numeros y guiones
+
+reto extra: la fecha todos los meses tienen 30 dias
+
+REGEX: (0[1-9]|[12]\d|3[01])[-/](0[1-9]|1[0-2])[-/](19|20)\d{2}
+
+dd-mm-yyyy
+dd/mm/yyyy
+dd-mm-yyyy
+
+26-03-2001
+
+
+
+santiagovilla333+1@gmail.com
+
+santiago_banol82242@elpoli.edu.co
+
+santiago_banol82242@elpoli33.edu.co
+
+3126863194
+
+
+---------------------------------------------------------
+
+REGEX ab*c
+
+ac abc abbc abbbc abbbbc abdbdbc
+
+
+
+import re #libreria
+
+find 
+
+search = si encuentra devuelve un boobleano
+
+findall
+
+ejemplo:
+
+texto="gato, gato, gito, goto, guto, g4to, g-to"
+
+resultado = re.findall (r"g.to",texto)
+print (f "Patron 'g.to': {resultado}")
+
+
+
+
+
+
+Conjuntos
+Quiz
