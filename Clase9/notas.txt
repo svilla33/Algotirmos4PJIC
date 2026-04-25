@@ -1,0 +1,81 @@
+analisis asintotico
+
+un algoritmo eficiente usa menos instrucciones tiempo o memoria
+
+el reto principal es manejar problemas con multiples parametros y casos infinitos, evitando
+analisis especificos demasiado detallados
+
+conceptos clave: notacion asicronica, complejidad temporal y espacial 
+
+Medidas Importantes:
+    tamaño de la entrada(no es matematicamente preciso)
+
+    Ejemplos: ordene un arreglo de 10 numeros enteros ¿cual es el tamaño de la entrada? 
+    R: 10
+
+    Cual es el tamaño de la entrada al calcular el factorial del numero 20
+    R: 20
+
+    Cual es el tamaño de a entrada al multiplicar dos matrices de dimensiones 3x4 y 4x2
+    R: 20 4 x 3 + 4 x 2
+
+    Cual es el tamaño de la entrada de un grafo con 6 nodos y 9 aristas
+    R: depende, si voy a rrecorrerlo(15) o si voy a usar solo los nodos (6)
+
+Dependiendo de lo que se vaya a hacer las entradas varian
+
+Notacion asintotica: BIG-O
+
+Intancia: entrada
+
+salida
+
+Digamos que tengo esto:
+    def elegir (arr)
+        if arr is not true:
+            return arr[0]
+        return None
+
+en funcion:
+    F(n) = 3
+
+    n: el tamaño de arr
+    3: numero de lineas, las lienas solo e ejecutan una vez
+
+    en BIG-O: elmnamos las contantes de la Funcion
+
+    O(1)
+
+El quiz va a ser nos dan unos algotirmos y tenemos que mirar la complejidad
+
+Vamos con otro ejemplo:
+
+    def elegir (arr,elem)
+    for i in range (len(arr))
+        if arr[i] == elem:
+            return True
+        return False
+
+EN funcion: f(n)= 2n +1
+
+2: las lineas que se repiten en el for
+1: el return False
+
+en BIG-O seria: O(n)
+
+si el ciclo depende de la entrada y adentro solo hay operaciones elementales: linea
+
+cotas:
+ O(g(n)) Cota superioir
+ Teta(g(n)) Orden Exacto
+ Omega(g(n)) Cota Inferioir
+
+ complejidad fibonacci
+
+ o(g(n)) = 2^
+
+ Omega(g(n)) 
+
+ hay problemas que no se pueden Resolver de manera no polinomica, cosas complejas
+
+ la pregunta es todos los Problemas se pueden resolver de manera polinomica?
